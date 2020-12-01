@@ -32,5 +32,4 @@ router.patch("/:id", restrictedAccess, async (req, res) => {
   res.send(`User id: ${id} updated`);
 });
 
-
 export default router;
