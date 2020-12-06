@@ -4,6 +4,8 @@ import Middlewares from './middlewares';
 import Controllers from './controllers';
 import Documentation from './documentation';
 import ConnectDatabase from './database';
+import { asyncHandler } from "@Middlwares/error-handler";
+
 
 const app = express();
 const router = express.Router();
