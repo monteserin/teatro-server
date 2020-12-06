@@ -6,6 +6,8 @@ import Documentation from './documentation';
 import ConnectDatabase from './database';
 
 const app = express();
+const router = express.Router();
+
 /*
 Heroku utiliza la variable de entorno process.env.port para asignar el puerto donde se va ejecutar el servidor,
 por eso la hemos definido en esta plantilla
@@ -20,3 +22,6 @@ ConnectDatabase(() => {
     server.listen(port, () => console.log(`Server listening to http://localhost:${port}`));
 });
 
+router.get("/", asyncHandler(async (req, res) => {
+    res.send(`working ٩(^‿^)۶`);
+}));
