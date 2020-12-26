@@ -5,4 +5,5 @@ export default {
     password: '75989781',
     database: 'heroku_36dfd48c92e173b',
     connectionLimit: 10,
+    forceCleanDatabase: false
 };

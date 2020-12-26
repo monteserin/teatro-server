@@ -5,13 +5,23 @@ export const createUser = (username, password) => UserSchema.create({
     password,
 });
 
-export const updateUser = (id, data) => UserSchema.update(data, { where: { id }});
+export const updateUser = (id, data) => UserSchema.update(data, { where: { id } });
 
-export const deleteUser = id => UserSchema.destroy({ where: { id }});
+export const deleteUser = id => UserSchema.destroy({ where: { id } });
 
 export const getUserByEmailAndPassword = (username, password) => UserSchema.findOne({
     where: {
         username,
         password
     }
+});
+
+export const getIfUserExistsByGoogleId = (googleId) => UserSchema.findOne({
+    where: {
+        googleId
+    }
+});
+
+export const registerNewUserByGoogleId = (googleId) => UserSchema.create({
+    googleId,
 });

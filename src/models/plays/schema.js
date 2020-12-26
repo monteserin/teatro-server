@@ -1,4 +1,4 @@
-import { db } from '../../database';
+import { db } from '../../application/database';
 const { DataTypes } = require('sequelize');
 
 const Play = db.define('play', {

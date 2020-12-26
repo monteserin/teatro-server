@@ -1,17 +1,16 @@
 import UsersController from './users';
-import AuthController from './auth';
 import PlaysController from './plays';
+import LinesController from './lines';
 
 
 export default function (app) {
-  // Public
-  app.use('/auth', AuthController);
 
   app.use('/plays', PlaysController);
+  app.use('/lines', LinesController);
 
   // Private
   app.use('/users', UsersController);
 
-  app.use('/', (req, res) => res.send(`Working like a charm ٩(^‿^)۶`));
+  app.use('/', (req, res) => res.send(`Working like a charmii ٩(^‿^)۶`));
 
 }
